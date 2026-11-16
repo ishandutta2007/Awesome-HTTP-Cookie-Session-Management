@@ -52,9 +52,9 @@ The commercial enterprise market is **moderately concentrated at the top**—whe
 
 ## 🛠️ Open-Source GitHub Projects
 
-*Curated open-source projects, developer libraries, browser extensions, and self-hosted platforms for HTTP cookies and session management. Ranked by GitHub stars (descending).*
+*Curated open-source projects, developer libraries, browser extensions, and self-hosted platforms for HTTP cookies and session management. Ranked by GitHub_Stars (descending).*
 
-| Project | GitHub Stars | Description | Category |
+| Project | GitHub_Stars | Description | Category |
 |---|---|---|---|
 | **[js-cookie](https://github.com/js-cookie/js-cookie)** | [![Stars](https://img.shields.io/github/stars/js-cookie/js-cookie?style=social&color=white)](https://github.com/js-cookie/js-cookie/stargazers) | 🍪 Lightweight, dependency-free JavaScript API for reading, writing, and deleting client-side browser cookies across all browsers. | Client Library |
 | **[express-session](https://github.com/expressjs/session)** | [![Stars](https://img.shields.io/github/stars/expressjs/session?style=social&color=white)](https://github.com/expressjs/session/stargazers) | ⚡ The de-facto session middleware for Express.js, storing session IDs in HTTP cookies with pluggable server-side stores (Redis, Mongo, Memcached). | Backend Middleware |
