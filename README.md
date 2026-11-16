@@ -1,72 +1,83 @@
 # Awesome-HTTP-Cookie-Session-Management
 
-## Top HTTP Cookie & Session Management Ecosystem
+[![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
+[![Tracked Repos](https://img.shields.io/badge/Focus-HTTP%20Cookies%20%26%20Sessions-blue.svg)](https://github.com/ishandutta2007/Awesome-HTTP-Cookie-Session-Management)
+[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/ishandutta2007/Awesome-HTTP-Cookie-Session-Management/graphs/commit-activity)
 
-**Curated List of SaaS Platforms & Open-Source GitHub Projects**  
-*Focused on Cookie Inspection, Consent Management & Self-Hosted Session Tooling*  
-**Last updated: March 2026**
-
-This repository tracks notable **SaaS platforms** and **open-source projects** for **HTTP Cookie & Session Management**. These tools help developers and security teams inspect, edit, and audit cookies and sessions—covering everything from browser extensions that manage session state to self-hosted consent platforms that enforce privacy compliance.
-
-**Examples** include Postman Cookie Management, Bokal, OWASP PTK, Hugin, ConsentOS, and Conzent OCI (the category leaders).
-
-**Open-source emphasis**: This section highlights every major active project for self-hosted cookie editing, open-source session tooling, and community-driven consent management—ideal for teams seeking data sovereignty and avoiding per-domain SaaS pricing. The open-source landscape is genuinely functional: **Bokal** is the trustworthy successor to EditThisCookie with full HttpOnly control , **Hugin** bundles a cookie jar into a security testing proxy , and **ConsentOS** provides a self-hosted OneTrust alternative with IAB TCF v2.3 support .
-
-Contributions welcome! Open an PR to add/update entries. Keep descriptions factual and link to official sites.
-
-## Table of Contents
-- [SaaS/Hosted Platforms](#saas-products)
-- [Open-Source GitHub Projects](#open-source-github-projects)
-- [How to Contribute](#how-to-contribute)
-- [Disclaimer](#disclaimer)
-
-## SaaS/Hosted Platforms
-
-| Product | Description | Pricing (Starting) | Free Tier / Trial Limits |
-|---------|-------------|-------------------|--------------------------|
-| **[Postman Cookie Management](https://www.postman.com/)** | Cookie jar within Postman for managing session cookies across API requests. Supports domain-level cookie management and automatic cookie persistence. | Free: **$0** (1 user); Solo: **$9/month**; Team: **$19/user/month** | **Free**: 1 user only, unlimited collection runs, no team workspace (March 2026 restructure) |
-| **[Charles Proxy](https://www.charlesproxy.com/)** | HTTP proxy with cookie inspection and session management. View and edit cookies in transit. | ~**$50** (license) | Free trial with 30-minute session limits |
-| **[Fiddler](https://www.telerik.com/fiddler)** | Web debugging proxy with cookie inspection. | Lite: **$7/user/month** (annual); Pro: **$13** | Lite plan available; Pro features require paid subscription |
-| **[Cookiebot](https://www.cookiebot.com/)** | Cookie consent management platform (CMP) with automated scanning and compliance reporting. | Quote-only | Free trial available |
-| **[OneTrust Cookie Compliance](https://www.oneTrust.com/)** | Enterprise cookie consent and compliance platform. | Quote-only (module-based) | No free tier; demo via sales |
-
-## Open-Source GitHub Projects
-
-| Project | Star Badge | Description |
-|---------|------------|-------------|
-| **[Bokal](https://github.com/yuvisbabbar/Bokal)** | [![Stars](https://img.shields.io/github/stars/yuvisbabbar/Bokal?style=social&color=white)](https://github.com/yuvisbabbar/Bokal/stargazers) | **The trustworthy open-source successor to EditThisCookie.** **Chrome extension** for developers, QA, and privacy-conscious users . **Full cookie control**: view, edit, add, and delete cookies **including HttpOnly cookies** that UI-only tools can't touch . **Search, filter, protect, pin, and block** cookies by domain . **Automatic cleanup** with a preserve list—clear everything else with one click or daily sweep . **Cookie audit hints**: flags missing SameSite, unpartitioned cross-site cookies, and oversized cookies . **Export to JSON, Netscape, and cookie-header formats**; **Playwright/Puppeteer storageState export** for test automation . **CHIPS partition inspector** for modern partitioned cookies. **DevTools panel** for in-browser inspection . **No telemetry, no tracking, local-first**—cookies never leave your device . **Best for QA engineers and developers** needing a safe, open-source cookie editor with test automation export. |
-| **[OWASP Penetration Testing Kit (PTK)](https://github.com/DenisPodgurskii/pentestkit)** | — | **Open-source browser extension for interactive security testing.** **Capture and inspect HTTP requests and responses** from real browser workflows . **Cookie and session inspection**: review cookies, browser storage, security headers, and application technologies . **JWT inspection and editing** built in . **R-Builder** for replaying and modifying requests with cURL import/export . **Runs from the live browser session**—no separate proxy required for normal workflows . **Integrates with OWASP ZAP** for combined browser-side and proxy-based testing . **Best for security practitioners** wanting cookie/session inspection alongside broader web app testing. |
-| **[Hugin](https://github.com/HuginCyber/Hugin)** | [![Stars](https://img.shields.io/github/stars/HuginCyber/Hugin?style=social&color=white)](https://github.com/HuginCyber/Hugin/stargazers) | **Local-first security testing power tool in a single Rust binary.** **Intercepting proxy** with **cookie jar, session macros, and WebSocket message interception** . **HTTP/1.1, HTTP/2, HTTP/3 (QUIC), and WebSocket** support . **No accounts, no telemetry, no cloud**. **Cookie jar** manages session cookies across requests; **session macros** automate authentication flows . **Active scanner** with 64 checks including session fixation and CSRF . **Best for security testers** wanting a comprehensive proxy with cookie/session management built in. |
-| **[PhoenixBox](https://github.com/avihayf/PhoenixBox)** | — | **Multi-container extension for pentesting with full session isolation.** **Color-coded containers** isolate cookies, storage, and sessions by role . **Route traffic through Burp Suite or custom proxies** per container . **No telemetry, no data collection** . **Best for bug bounty hunters and pentesters** needing to maintain multiple authenticated sessions simultaneously without collisions. |
-| **[AuthForge](https://github.com/mthcht/AuthForge)** | [![Stars](https://img.shields.io/github/stars/mthcht/AuthForge?style=social&color=white)](https://github.com/mthcht/AuthForge/stargazers) | **Browser addon for cookie and token extraction.** **Network capture** of `Set-Cookie` headers, `Authorization` headers, and JWT detection . **Request Workbench** for replaying captured requests with editable headers, body, and **`Use captured token…`** to swap in any detected token . **Best for security testers** wanting to inspect and manipulate cookies/tokens during testing. |
-
-### Additional Strong Open-Source Options
-
-| Project | Star Badge | Description |
-|---------|------------|-------------|
-| **[ConsentOS](https://github.com/consentos/consentos)** | — | **Self-hosted OneTrust/Cookiebot alternative.** **Elastic License 2.0** (source-available, self-host indefinitely) . **IAB TCF v2.3, GPP v1, Google Consent Mode v2, GPC** support . **Auto-blocking** intercepts script creation and cookie writes until consent is granted . **Cookie scanner** with Playwright and Open Cookie Database (2,200+ patterns) . **Dark pattern detection** and **compliance engine** for GDPR, CCPA/CPRA, ePrivacy . **Best for teams wanting privacy-first consent management** on their own infrastructure. |
-| **[Conzent OCI](https://github.com/conzent-net/oci)** | — | **PHP-based open-source consent management platform.** **IAB TCF v2.2/v2.3 and Google Consent Mode v2** support . **Built-in cookie scanner** with headless Chromium . **Multi-tenant** with organisations, sites, and role-based access . **12 domain boundaries** including Identity, Cookie, Consent, Banner, Compliance, and Scanning . **Best for organizations wanting a self-hosted CMP** with compliance reporting. |
-| **[next-iron-session](https://github.com/vvo/next-iron-session)** | — | **Secure, stateless, cookie-based session library for Next.js.** **4.1k GitHub stars** . Encrypted session cookies with no server-side storage. **Best for Next.js developers** needing secure session management without a database. |
-| **[gorilla/securecookie](https://github.com/gorilla/securecookie)** | — | **Go library for authenticated and encrypted cookie values.** **668 stars** . **Best for Go developers** needing secure cookie encoding/decoding. |
-
-**Frameworks for building custom systems**: Choose **Bokal** for a safe, open-source cookie editor with Playwright/Puppeteer export , **ConsentOS** for a self-hosted consent platform with IAB TCF compliance , or **next-iron-session** for encrypted session cookies in Next.js —all without per-domain SaaS fees.
-
-## How to Contribute
-
-1. Fork the repo.
-2. Add/edit entries in `README.md` (follow existing format).
-3. Include: name, link, 1–2 sentence description, and whether it's SaaS or open-source.
-4. Submit PR with a short explanation.
-
-Star the repo if you find it useful!
-
-## Disclaimer
-
-- This is a **community-curated** list — not exhaustive and not an endorsement.
-- Cookie and session management tools handle authentication tokens and potentially sensitive session data; **only inspect or modify cookies on systems you own or have explicit authorization to test**. Cookie theft enables account takeover.
-- **The cookie tooling landscape has a trust problem.** **Bokal explicitly positions itself as the trustworthy successor to EditThisCookie**, which was taken down and replaced by a copycat—Bokal has **no telemetry, no remote code, and minimal permissions** (no "tabs" permission, requests host access only when you choose to manage a site) . **OWASP PTK and Hugin are purpose-built for authorized security testing**—using them on production sites without permission can modify data and trigger security monitoring . **ConsentOS and Conzent OCI solve a different problem**: they are **consent management platforms** that block cookies until user consent is granted, not tools for inspecting or editing existing cookies . **Commercial CMPs (OneTrust, Cookiebot) are quote-only enterprise contracts**—ConsentOS offers a source-available self-hosted alternative with IAB TCF v2.3 support . **Validate whether you need cookie inspection/editing (Bokal, PTK, Hugin), session isolation (PhoenixBox), or consent management (ConsentOS, Conzent)** before committing.
+> A curated directory of top SaaS platforms, security proxies, browser extensions, libraries, and open-source tools for **HTTP Cookie & Session Management**, cookie inspection, consent compliance (GDPR/ePrivacy/CCPA), and session security.
 
 ---
 
-**Made for developers, QA engineers, and security teams managing cookies and sessions.**  
-Let's make HTTP cookie and session management more open, trustworthy, and privacy-respecting.
+## Table of Contents
+- [Sector Overview & Market Dynamics](#sector-overview--market-dynamics)
+- [SaaS & Commercial Platforms](#saas--commercial-platforms)
+- [Open-Source GitHub Projects](#open-source-github-projects)
+  - [Cookie & Session Utilities & Frameworks](#cookie--session-utilities--frameworks)
+  - [Security Proxies & Browser Inspection Extensions](#security-proxies--browser-inspection-extensions)
+  - [Open-Source Consent Management Platforms (CMP)](#open-source-consent-management-platforms-cmp)
+- [How to Contribute](#how-to-contribute)
+- [Disclaimer](#disclaimer)
+
+---
+
+## Sector Overview & Market Dynamics
+
+The global Consent Management Platform (CMP) and web privacy/session management sector is estimated at **$1.1 billion to $1.4 billion** in 2025–2026, projected to expand rapidly toward **$2.5 billion–$6.7 billion** by the 2030s (at a CAGR of ~14–19%) driven by stringent global regulations (GDPR, CCPA/CPRA, ePrivacy, and Google Consent Mode v2).
+
+The commercial enterprise market is **moderately concentrated at the top**—where a handful of enterprise leaders (OneTrust, BigID, and TrustArc) control more than 50% of enterprise market spend—while the developer tooling, proxy, and SMB consent landscape remains **highly fragmented**, fostering a robust ecosystem of specialized privacy suites, local-first proxies, and developer-friendly open-source frameworks.
+
+---
+
+## SaaS & Commercial Platforms
+
+*Commercial SaaS platforms, enterprise consent management tools, and developer debugging proxies sorted by company valuation / market capitalization (descending).*
+
+| Product | Description | Starting Tier Price | Free Tier / Trial Limits | Company Scale (Valuation / Revenue / Market Cap) |
+|---|---|---|---|---|
+| **[Postman Cookie Management](https://www.postman.com/)** | Cookie jar within Postman for managing session cookies across API requests with domain-level persistence. | **$9/user/month** (Basic/Solo billed annually; $14/mo monthly) | **Free Forever Plan**: 1 user only, unlimited collection runs, up to 30 API calls/mo to Postman API, no team workspaces | **$5.6B Valuation** ($313M+ ARR, backed by Insight Partners) |
+| **[OneTrust Cookie Compliance](https://www.onetrust.com/)** | Enterprise privacy and cookie consent management platform supporting automated scans, granular banner controls, and global compliance frameworks. | **~$10,000/year** (Starting contract minimum for core modules) | **14-day Free Trial** via sales contact (Full enterprise module access; no permanent free plan) | **$4.5B–$5.0B Valuation** (~$500M+ ARR, PE-backed) |
+| **[Fiddler Everywhere](https://www.telerik.com/fiddler/fiddler-everywhere)** | Cross-platform web debugging proxy (macOS, Windows, Linux) to inspect, edit, and mock HTTP/HTTPS session cookies and headers in transit. | **$13/user/month** (Pro plan billed annually; $19/mo monthly) | **10-day Free Trial** (Unrestricted access to all Pro features and team sharing; legacy Fiddler Classic free for Windows non-commercial) | **$1.8B Market Cap** (Parent: Progress Software [NASDAQ: PRGS], ~$978M ARR) |
+| **[Cookiebot CMP](https://www.cookiebot.com/)** | Automated cookie consent management platform featuring deep website scanning, auto-blocking, and IAB TCF / Google Consent Mode v2 support. | **~$8/month (€7/mo)** (Premium Lite, billed monthly or annually) | **Free Forever Plan**: 1 domain and strictly <50 subpages (manual blocking, 1 language, 30-day consent logs) / **14-day Free Trial** with full Premium features | **€100M+ (~$117M+) ARR** (Parent: Usercentrics / Cybot, growth equity backed) |
+| **[Charles Proxy](https://www.charlesproxy.com/)** | Desktop HTTP/HTTPS debugging proxy application for intercepting, viewing, and modifying cookies, cache, and session tokens. | **$50 one-time license** (Perpetual single-user license for Charles v5) | **30-day Free Trial** (Full features with 30-minute session limits per launch and 10-second startup delays) | **Privately held boot-strapped micro-SaaS / tool** (XK72 Ltd, est. revenue <$5M) |
+
+---
+
+## Open-Source GitHub Projects
+
+*Curated open-source projects, developer libraries, browser extensions, and self-hosted platforms for HTTP cookies and session management. Ranked by GitHub stars (descending).*
+
+| Project | GitHub Stars | Description | Category |
+|---|---|---|---|
+| **[js-cookie](https://github.com/js-cookie/js-cookie)** | [![Stars](https://img.shields.io/github/stars/js-cookie/js-cookie?style=social&color=white)](https://github.com/js-cookie/js-cookie/stargazers) | Lightweight, dependency-free JavaScript API for reading, writing, and deleting client-side browser cookies across all browsers. | Client Library |
+| **[express-session](https://github.com/expressjs/session)** | [![Stars](https://img.shields.io/github/stars/expressjs/session?style=social&color=white)](https://github.com/expressjs/session/stargazers) | The de-facto session middleware for Express.js, storing session IDs in HTTP cookies with pluggable server-side stores (Redis, Mongo, Memcached). | Backend Middleware |
+| **[CookieConsent (Orest Bida)](https://github.com/orestbida/cookieconsent)** | [![Stars](https://img.shields.io/github/stars/orestbida/cookieconsent?style=social&color=white)](https://github.com/orestbida/cookieconsent/stargazers) | Modern, lightweight (<5kB gzip) cookie consent banner written in pure vanilla JS. Supports Google Consent Mode v2, multilinguality, and dark mode. | Consent Management |
+| **[iron-session](https://github.com/vvo/iron-session)** | [![Stars](https://img.shields.io/github/stars/vvo/iron-session?style=social&color=white)](https://github.com/vvo/iron-session/stargazers) | Secure, stateless, cookie-based session library for Next.js, Node.js, and web standards. Encrypts session data inside cookies without requiring database lookups. | Backend / Next.js |
+| **[Osano Cookie Consent](https://github.com/osano/cookieconsent)** | [![Stars](https://img.shields.io/github/stars/osano/cookieconsent?style=social&color=white)](https://github.com/osano/cookieconsent/stargazers) | Popular open-source JavaScript plugin for alerting users about the use of cookies to ensure compliance with EU GDPR and California privacy laws. | Consent Management |
+| **[gorilla/sessions](https://github.com/gorilla/sessions)** | [![Stars](https://img.shields.io/github/stars/gorilla/sessions?style=social&color=white)](https://github.com/gorilla/sessions/stargazers) | Go session management library providing cookie-based and filesystem session stores with authentication and encryption capabilities. | Backend Middleware |
+| **[gin-contrib/sessions](https://github.com/gin-contrib/sessions)** | [![Stars](https://img.shields.io/github/stars/gin-contrib/sessions?style=social&color=white)](https://github.com/gin-contrib/sessions/stargazers) | Session middleware for the Gin web framework with support for cookies, Redis, Memcached, MongoDB, and GORM stores. | Backend Middleware |
+| **[tough-cookie](https://github.com/salesforce/tough-cookie)** | [![Stars](https://img.shields.io/github/stars/salesforce/tough-cookie?style=social&color=white)](https://github.com/salesforce/tough-cookie/stargazers) | RFC6265 compliant cookie parsing, serialization, and Cookie Jar implementation for Node.js maintained by Salesforce. | Node.js Utility |
+| **[gorilla/securecookie](https://github.com/gorilla/securecookie)** | [![Stars](https://img.shields.io/github/stars/gorilla/securecookie?style=social&color=white)](https://github.com/gorilla/securecookie/stargazers) | Encodes and decodes authenticated and optionally encrypted cookie values for Go HTTP web applications. | Go Utility |
+| **[OWASP PTK (Penetration Testing Kit)](https://github.com/DenisPodgurskii/pentestkit)** | [![Stars](https://img.shields.io/github/stars/DenisPodgurskii/pentestkit?style=social&color=white)](https://github.com/DenisPodgurskii/pentestkit/stargazers) | Interactive browser extension for web application security. Inspects cookies, headers, JWT tokens, and live session traffic with request replay. | Security Browser Extension |
+| **[ConsentOS](https://github.com/consentos/consentos)** | [![Stars](https://img.shields.io/github/stars/consentos/consentos?style=social&color=white)](https://github.com/consentos/consentos/stargazers) | Self-hosted OneTrust alternative for privacy-first consent management. Supports IAB TCF v2.3, Google Consent Mode v2, and automated cookie scanning. | Self-Hosted CMP |
+| **[Conzent OCI](https://github.com/conzent-net/oci)** | [![Stars](https://img.shields.io/github/stars/conzent-net/oci?style=social&color=white)](https://github.com/conzent-net/oci/stargazers) | Open Consent Infrastructure: PHP-based multi-tenant open-source consent management platform with headless Chromium cookie crawler. | Self-Hosted CMP |
+| **[PhoenixBox](https://github.com/avihayf/PhoenixBox)** | [![Stars](https://img.shields.io/github/stars/avihayf/PhoenixBox?style=social&color=white)](https://github.com/avihayf/PhoenixBox/stargazers) | Firefox container extension for penetration testing and bug hunting with complete session and cookie isolation per tab. | Security Extension |
+| **[AuthForge](https://github.com/mthcht/AuthForge)** | [![Stars](https://img.shields.io/github/stars/mthcht/AuthForge?style=social&color=white)](https://github.com/mthcht/AuthForge/stargazers) | Browser addon for extracting, inspecting, and forging `Set-Cookie` headers and authorization tokens during web testing. | Security Extension |
+| **[Bokal](https://github.com/yuvibabbar-dev/bokal)** | [![Stars](https://img.shields.io/github/stars/yuvibabbar-dev/bokal?style=social&color=white)](https://github.com/yuvibabbar-dev/bokal/stargazers) | Open-source successor to EditThisCookie built on Manifest V3. Full control over `HttpOnly` cookies, SameSite audit hints, and Playwright/Puppeteer storage export. | Browser Extension / Editor |
+| **[Hugin](https://github.com/HuginCyber/Hugin)** | [![Stars](https://img.shields.io/github/stars/HuginCyber/Hugin?style=social&color=white)](https://github.com/HuginCyber/Hugin/stargazers) | Local-first intercepting security testing proxy in Rust featuring automated cookie jar management and session macro flows. | Security Proxy |
+
+---
+
+## How to Contribute
+
+Contributions are warmly welcome!
+1. Fork the repository.
+2. Add your project or SaaS tool to the appropriate table maintaining table formatting.
+3. Keep descriptions objective, specify transparent pricing / star links, and submit a PR with a brief note.
+
+---
+
+## Disclaimer
+
+- This list is **community-curated** for educational, developer, and security audit purposes.
+- Cookie and session inspection tools handle sensitive authentication tokens; only test web assets you have explicit legal permission to audit.
+- For consent compliance, verify legal requirements with qualified legal counsel in your respective jurisdictions (GDPR, CCPA/CPRA, ePrivacy).
