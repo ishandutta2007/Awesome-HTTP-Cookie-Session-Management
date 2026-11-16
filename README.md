@@ -1,6 +1,6 @@
 # Awesome-HTTP-Cookie-Session-Management
 
-# Top HTTP Cookie & Session Management Ecosystem
+## Top HTTP Cookie & Session Management Ecosystem
 
 **Curated List of SaaS Platforms & Open-Source GitHub Projects**  
 *Focused on Cookie Inspection, Consent Management & Self-Hosted Session Tooling*  
